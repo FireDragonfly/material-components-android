@@ -89,6 +89,12 @@ public class CheckableImageButton extends AppCompatImageButton implements Checka
   }
 
   @Override
+  public boolean performClick() {
+      toggle();
+      return super.performClick();
+  }
+
+  @Override
   public void toggle() {
     setChecked(!checked);
   }
